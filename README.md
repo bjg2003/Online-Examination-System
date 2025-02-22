@@ -33,6 +33,3 @@
 ## 🧪 Testing
 - Uses **JUnit** for unit testing.
 - Utilizes **Maven** for build automation.
-
-## 📄 License
-[Specify your license here]

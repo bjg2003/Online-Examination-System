@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+     <!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/examdb?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Pass@123</property>
+
+		<!-- Specify the SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- Enable SQL logging to see generated SQL in the console -->
+		<property name="show_sql">true</property>
+
+		<!-- Automatically update the database schema based on your entity mappings -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Mapping entity classes -->
+		<mapping class="com.example.exam.model.User" />
+		<mapping class="com.example.exam.model.Exam" />
+		<mapping class="com.example.exam.model.Question" />
+		<mapping class="com.example.exam.model.Result"/>
+	</session-factory>
+</hibernate-configuration>
